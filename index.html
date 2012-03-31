@@ -31,10 +31,10 @@
 	<li>Submitting content about the current page to an issue tracking system.</li>
 </ul>
 <p>The following code can be used to create a link to a bookmarklet:</p>
-<pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://example.com/path/to/javascript.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;activate example bookmarklet&lt;/a&gt;
+<pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;activate example bookmarklet&lt;/a&gt;
 </pre>
 <p>Which will render like so:</p>
-<p><a class="btn" href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://example.com/path/to/javascript.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();">activate example bookmarklet</a></p>
+<p><a class="btn" href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();">activate example bookmarklet</a></p>
 <p>The user then drags this link to their bookmark bar in their browser. From there they can click to activate the bookmarklet.</p>
 <p>This bookmarklet just inserts a script tag with the specified JS file into the current page. It has a 2 minute cache-busting query string to ensure that the latest version of the JS is loaded.</p>
 <p>The benefits of keeping the rest of your code outside of the bookmarklet are:</p>
@@ -44,7 +44,6 @@
 	<li>You can update the script and everyone that has added the bookmarklet previously will receive the changes.</li>
 </ul>
 <hr>
-																
 						</div>
 					</div>
 				</div>
