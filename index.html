@@ -19,7 +19,36 @@
 		</div>
 		<div class="row">
 			<div class="span9">
+				<div class="article">
+					<div class="row">
+						<div class="span1">
+							<span class="label label-inverse" title="Friday 30th March 2012">31/03/2012</span>
+						</div>
+						<div class="span6">
+							<h2>Bookmarklet template</h2>
+<p>Bookmarklets are used to trigger JavaScript code on any web page. This can be useful for many situations, such as:</p>
 <ul>
+	<li>Overlaying a grid on a page to ensure confirmation to user interface guidelines.</li>
+	<li>Submitting content about the current page to an issue tracking system.</li>
+</ul>
+<p>The following code can be used to create a link to a bookmarklet:</p>
+<pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://example.com/path/to/javascript.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;activate example bookmarklet&lt;/a&gt;
+</pre>
+<p>Which will render like so:</p>
+<p><a class="btn" href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://example.com/path/to/javascript.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();">activate example bookmarklet</a></p>
+<p>The user then drags this link to their bookmark bar in their browser. From there they can click to activate the bookmarklet.</p>
+<p>This bookmarklet just inserts a script tag with the specified JS file into the current page. It has a 2 minute cache-busting query string to ensure that the latest version of the JS is loaded.</p>
+<p>The benefits of keeping the rest of your code outside of the bookmarklet are:</p>
+<ul>
+	<li>It is easier to maintain a normal JS file, rather than compiling it to bookmarklet form.</li>
+	<li>There is no character limit on the length of the script, but there is inside the bookmarklet itself (depending on browser).</li>
+	<li>You can update the script and everyone that has added the bookmarklet previously will receive the changes.</li>
+</ul>
+<hr>
+																
+						</div>
+					</div>
+				</div>
 				<div class="article">
 					<div class="row">
 						<div class="span1">
