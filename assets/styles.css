@@ -3,3 +3,7 @@ pre.prettyprint {
     border: 1px solid #E1E1E8;
     padding: 8px;
 }
+
+div.page-header {
+	background: url(creecha.png) no-repeat top right;
+}
