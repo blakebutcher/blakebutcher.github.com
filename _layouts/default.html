@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BlakeButcher.com</title>
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
-	<link rel="stylesheet" href="lib/google-code-prettify/prettify.css" type="text/css" charset="utf-8">
-	<link rel="stylesheet" href="assets/styles.css" type="text/css" charset="utf-8">
+	<title>BlakeButcher.com - {{ page.title }}</title>
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="/lib/google-code-prettify/prettify.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="/assets/styles.css" type="text/css" charset="utf-8">
 	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="lib/google-code-prettify/prettify.js"></script>
-	<script type="text/javascript" charset="utf-8" src="assets/scripts.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/lib/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript" charset="utf-8" src="/assets/scripts.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -18,11 +18,7 @@
 		</div>
 		<div class="row">
 			<div class="span9">
-				<ul class="posts">
-					{% for post in site.posts %}
-						<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
+				{{ content }}
 			</div>
 			<div class="span3">
 				<p>Hi. I live in Brisbane, Australia. I work as a web developer for <a href="http://www.abc.net.au/news/">ABC News</a>. You can <a href="mailto:blake.butcher+blakebutcher.com@gmail.com">send me an email</a> if you want to.</p>
