@@ -2,8 +2,27 @@
 layout: default
 title: Blake Butcher
 ---
-<ul class="nav nav-list">
-	{% for post in site.posts %}
-		<li><a href="{{ post.url }}"><span class="label label-inverse">{{ post.date | date_to_string }}</span> {{ post.title }}</a></li>
-	{% endfor %}
+{% for post in paginator.posts %}
+    <div class="post">
+        <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+        {{ post.content }}
+        <p><a href="{{ post.url }}" title="{{ post.title }}">{{ post.date | date_to_string }}</a></p>
+		<hr />
+    </div>
+{% endfor %}
+
+<ul class="pager">
+{% if paginator.next_page %}
+	<li class="previous"><a href="/page{{ paginator.next_page }}/">&larr; Older</a></li>
+{% endif %}
+{% include search.html %}
+{% if paginator.previous_page %}
+	<li class="next">
+	{% if paginator.previous_page == 1 %}
+		<a href="/">Newer &rarr;</a>
+	{% else %}
+		<a href="/page{{ paginator.previous_page }}">Newer &rarr;</a>
+	{% endif %}
+	</li>
+{% endif %}
 </ul>
