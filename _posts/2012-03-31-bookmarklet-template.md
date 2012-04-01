@@ -5,7 +5,7 @@ title: Bookmarklet template
 
 Bookmarklets are used to trigger JavaScript code on any web page. This can be useful for many situations, such as:
 
-* Overlaying a grid on a page to ensure confirmation to user interface guidelines.
+* Overlaying a grid on a page to ensure conformance to user interface guidelines.
 * Submitting content about the current page to an issue tracking system.
 
 The following code can be used to create a link to a bookmarklet:
