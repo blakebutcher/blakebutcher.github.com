@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: post
 title: Bookmarklet template
 ---
-
-{{ page.title }}
-================
 
 Bookmarklets are used to trigger JavaScript code on any web page. This can be useful for many situations, such as:
 
