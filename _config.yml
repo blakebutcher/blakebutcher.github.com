@@ -6,3 +6,8 @@ name: BlakeButcher.com
 tagline: Thoughts on web development
 baseurl: /
 production_url : http://blakebutcher.com
+author :
+  name : Blake Butcher
+  email : blake.butcher@gmail.com
+  github : blakebutcher
+  twitter : blakebutcher
