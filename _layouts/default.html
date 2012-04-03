@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BlakeButcher.com - {{ page.title }}</title>
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
 	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="/lib/google-code-prettify/prettify.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" href="/assets/styles.css" type="text/css" charset="utf-8">
