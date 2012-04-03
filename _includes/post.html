@@ -1,0 +1,6 @@
+<div class="post">
+    <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+    {{ post.content }}
+    <p><a href="{{ post.url }}" title="{{ post.title }}">{{ post.date | date_to_string }}</a></p>
+	<hr />
+</div>
