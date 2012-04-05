@@ -17,3 +17,7 @@ a.permalink:link,
 a.permalink:visited {
 	color: #ccc;
 }
+a.permalink:hover {
+	color: #333;
+	text-decoration: none;
+}
