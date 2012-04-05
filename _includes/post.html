@@ -1,5 +1,5 @@
 <div class="post">
-	<h2>{{ post.title }} <small><a href="{{ post.url }}" title="Permanent link to '{{ post.title }}'">#</a></small></h2>
+	<h2>{{ post.title }} <small><a class="permalink" href="{{ post.url }}" title="Permanent link to '{{ post.title }}'">&#8734;</a></small></h2>
 	<p><span class="post-date">{{ post.date | date_to_long_string }}</span></p>
 	{{ post.content }}
 	<hr />
