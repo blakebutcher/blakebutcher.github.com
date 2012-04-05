@@ -7,3 +7,8 @@ pre.prettyprint {
 div.page-header {
 	background: url(creecha.png) no-repeat top right;
 }
+
+span.post-date {
+	color: #ccc;
+	font-size: 11px;
+}

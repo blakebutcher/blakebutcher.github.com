@@ -1,6 +1,6 @@
 <div class="post">
-	<h1>{{ post.title }} <small><a href="{{ post.url }}" title="Permanent link to '{{ post.title }}'">#</a></small></h1>
-	<p><span class="label label-inverse">{{ post.date | date_to_string }}</span></p>
+	<h2>{{ post.title }} <small><a href="{{ post.url }}" title="Permanent link to '{{ post.title }}'">#</a></small></h2>
+	<p><span class="post-date">{{ post.date | date_to_long_string }}</span></p>
 	{{ post.content }}
 	<hr />
 </div>
