@@ -9,6 +9,11 @@ div.page-header {
 }
 
 span.post-date {
-	color: #ccc;
+	color: #999;
 	font-size: 11px;
+}
+
+a.permalink:link,
+a.permalink:visited {
+	color: #ccc;
 }
