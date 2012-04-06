@@ -14,8 +14,6 @@ The following code can be used to create a link to a bookmarklet:
 <pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;activate example bookmarklet&lt;/a&gt;
 </pre>
 
-<script src="https://gist.github.com/2316513.js?file=bookmarklet-example-markup.html"></script>
-
 Which will render like so:
 
 <a class="btn" href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();">activate example bookmarklet</a>
