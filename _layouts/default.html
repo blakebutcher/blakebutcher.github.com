@@ -17,18 +17,7 @@
 			<h1><a href="/">BlakeButcher<small>.com</small></a></h1>
 			<p>{{ site.tagline }}</p>
 		</div>
-		<div class="row">
-			<div class="span9">
-				<div class="row">
-					<div class="span7">
-						{{ content }}
-					</div>
-				</div>
-			</div>
-			<div class="span3">
-				{% include sidebar.html %}
-			</div>
-		</div>
+		{{ content }}
 		<hr>
 		<div class="footer">
 			<a href="/atom.xml">Subscribe to feed</a>
