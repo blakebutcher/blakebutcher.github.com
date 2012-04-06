@@ -1,5 +1,0 @@
-Hi. I live in Brisbane, Australia. I work as a web developer for <a href="http://www.abc.net.au/news/">ABC News</a>. You can <a href="mailto:blake.butcher+blakebutcher.com@gmail.com">send me an email</a> if you want to.
-
-Here are some links to my profiles on other sites that I don't update very often:
-
-{% include sidebar-nav.html %}
