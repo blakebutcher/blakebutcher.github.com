@@ -1,23 +1,17 @@
 pre.prettyprint {
-    background-color: #F7F7F9;
-    border: 1px solid #E1E1E8;
-    padding: 8px;
-}
+  background-color: #F7F7F9;
+  border: 1px solid #E1E1E8;
+  padding: 8px; }
 
 div.page-header {
-	background: url(creecha.png) no-repeat top right;
-}
+  background: url(creecha.png) no-repeat top right; }
 
 span.post-date {
-	color: #999;
-	font-size: 11px;
-}
+  color: #999;
+  font-size: 11px; }
 
-a.permalink:link,
-a.permalink:visited {
-	color: #ccc;
-}
+a.permalink:link, a.permalink:visited {
+  color: #ccc; }
 a.permalink:hover {
-	color: #333;
-	text-decoration: none;
-}
+  color: #333;
+  text-decoration: none; }
