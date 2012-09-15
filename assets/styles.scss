@@ -42,16 +42,16 @@ a {
 	&:hover {
 		color: #103a10;
 	}
+	&.permalink {
+		&:link,
+		&:visited {
+			color: #ccc;
+		}
+		&:hover {
+			color: #333;
+			text-decoration: none;
+		}
+	}
 }
 
-a.permalink {
-	&:link,
-	&:visited {
-		color: #ccc;
-	}
-	&:hover {
-		color: #333;
-		text-decoration: none;
-	}
-}
 
