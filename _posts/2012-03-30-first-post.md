@@ -3,4 +3,4 @@ layout: post
 title: First post
 ---
 
-This is my new personal website. It uses <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> for the front end. It is stored in a <a href="https://github.com/blakebutcher/blakebutcher.github.com">GitHub repository</a> and published using <a href="http://pages.github.com/">GitHub Pages</a> with <a href="https://github.com/mojombo/jekyll">Jekyll</a> templates. Posts are written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. And I'm using Google Analytics.
+This is my new personal website. It uses [Twitter Bootstrap](http://twitter.github.com/bootstrap) for the front end. It is stored in a [GitHub repository](https://github.com/blakebutcher/blakebutcher.github.com) and published using [GitHub Pages](http://pages.github.com/) with [Jekyll](https://github.com/mojombo/jekyll) templates. Posts are written in [Markdown](http://daringfireball.net/projects/markdown/). And I'm using Google Analytics.
