@@ -20,7 +20,7 @@ Which will render like so:
 
 The user then drags this link to their bookmark bar in their browser. From there they can click to activate the bookmarklet.
 
-This bookmarklet itself just inserts a script tag that loads a <a href="http://blakebutcher.com/content/example-bookmarklet.js">specified JS file</a> into the current page. It has a 2 minute cache-busting query string to ensure that the latest version of the JS is loaded.
+This bookmarklet itself just inserts a script tag that loads a [specified JS file](/content/example-bookmarklet.js) into the current page. It has a 2 minute cache-busting query string to ensure that the latest version of the JS is loaded.
 
 The benefits of keeping the rest of your code outside of the bookmarklet are:
 
