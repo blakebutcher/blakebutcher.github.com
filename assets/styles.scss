@@ -1,3 +1,22 @@
+@mixin background-linear-gradient-vertical($bottomColor, $bottomColor) {
+	/* fallback/image non-cover color */
+	background-color: $bottomColor;
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient($bottomColor, $bottomColor);
+	/* Safari 4+, Chrome 1+ */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($bottomColor), to($bottomColor));
+	/* Safari 5.1+, Chrome 10+ */
+	background-image: -webkit-linear-gradient($bottomColor, $bottomColor);
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient($bottomColor, $bottomColor);
+}
+
+body {
+	font-family: Esteban, Georgia, sans-serif;
+	font-size: 16px;
+	@include background-linear-gradient-vertical(#fff, #eee);
+}
+
 pre.prettyprint {
     background-color: #F7F7F9;
     border: 1px solid #E1E1E8;
@@ -11,6 +30,18 @@ div.page-header {
 span.post-date {
 	color: #999;
 	font-size: 11px;
+}
+
+a {
+	&:link {
+		color: #2bd72e;
+	}
+	&:visited {
+		color: #9ed040;
+	}
+	&:hover {
+		color: #103a10;
+	}
 }
 
 a.permalink {
