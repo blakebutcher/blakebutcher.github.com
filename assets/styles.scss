@@ -1,14 +1,14 @@
-@mixin background-linear-gradient-vertical($bottomColor, $bottomColor) {
+@mixin background-linear-gradient-vertical($topColor, $bottomColor) {
 	/* fallback/image non-cover color */
 	background-color: $bottomColor;
 	/* Firefox 3.6+ */
-	background-image: -moz-linear-gradient($bottomColor, $bottomColor);
+	background-image: -moz-linear-gradient($topColor, $bottomColor);
 	/* Safari 4+, Chrome 1+ */
-	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($bottomColor), to($bottomColor));
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($topColor), to($bottomColor));
 	/* Safari 5.1+, Chrome 10+ */
-	background-image: -webkit-linear-gradient($bottomColor, $bottomColor);
+	background-image: -webkit-linear-gradient($topColor, $bottomColor);
 	/* Opera 11.10+ */
-	background-image: -o-linear-gradient($bottomColor, $bottomColor);
+	background-image: -o-linear-gradient($topColor, $bottomColor);
 }
 
 body {
