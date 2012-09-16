@@ -9,10 +9,13 @@ production_url : http://blakebutcher.com
 navigation:
 - text: Blog
   url: /
+  section: blog
 - text: Follow
   url: /follow/
+  section: follow
 - text: CV
   url: /cv/
+  section: cv
 author :
   name : Blake Butcher
   email : blake.butcher+via-blakebutcher.com@gmail.com
