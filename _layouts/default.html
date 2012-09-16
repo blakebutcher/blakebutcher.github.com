@@ -22,12 +22,16 @@
 		    
 		    <ul class="nav nav-pills">
 				{% for link in site.navigation %}
-					{% assign current = nil %}
+					<!--
+					{{ page.url }}
+					{{ link.url }}
+					-->
 					{% if page.url == link.url or page.layout == link.layout %}
-						{% assign current = 'current' %}
+						<li class="{{ current }}">
+					{% else %}
+						<li>
 					{% endif %}
-					<li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-						<a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+						<a href="{{ link.url }}">{{ link.text }}</a>
 					</li>
 				{% endfor %}
 		    </ul>
