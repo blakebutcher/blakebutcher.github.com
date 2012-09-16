@@ -19,6 +19,19 @@
 		<div class="container">
 			<h1><a href="{{ site.baseurl }}">{{ site.name }}</a></h1>
 			{% if site.tagline %}<p>{{ site.tagline }}</p>{% endif %}
+		    
+		    <ul class="nav nav-pills">
+				{% for link in site.navigation %}
+					{% assign current = nil %}
+					{% if page.url == link.url or page.layout == link.layout %}
+						{% assign current = 'current' %}
+					{% endif %}
+					<li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+						<a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+					</li>
+				{% endfor %}
+		    </ul>
+
 		</div>
 	</div>
 	<div class="container">

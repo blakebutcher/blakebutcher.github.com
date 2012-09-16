@@ -2,12 +2,19 @@
 permalink: /:year-:month-:day/:title/
 paginate: 5
 exclude:
-name: BlakeButcher.com
-tagline: Thoughts on web development
+name: Blake Butcher
+tagline: I have no tagline
 baseurl: /
 production_url : http://blakebutcher.com
+navigation:
+- text: Blog
+  url: /
+- text: Follow
+  url: /follow/
+- text: CV
+  url: /cv/
 author :
   name : Blake Butcher
-  email : blake.butcher@gmail.com
+  email : blake.butcher+via-blakebutcher.com@gmail.com
   github : blakebutcher
   twitter : blakebutcher
