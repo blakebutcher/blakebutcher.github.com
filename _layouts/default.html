@@ -22,12 +22,8 @@
 		    
 		    <ul class="nav nav-pills">
 				{% for link in site.navigation %}
-<!--
-{{ page.section }}
-{{ link.section }}
--->
 					{% if page.section == link.section %}
-						<li class="{{ current }}">
+						<li class="current">
 					{% else %}
 						<li>
 					{% endif %}
