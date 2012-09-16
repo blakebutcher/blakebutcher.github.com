@@ -17,6 +17,10 @@ body {
 	@include background-linear-gradient-vertical(#fff, #eee);
 }
 
+h1, h2 {
+	font-weight: normal;
+}
+
 pre.prettyprint {
     background-color: #F7F7F9;
     border: 1px solid #E1E1E8;
