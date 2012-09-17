@@ -11,7 +11,9 @@ Bookmarklets are used to trigger some JavaScript on the currently open web page.
 
 I use the following code to create a bookmarklet link:
 
-<pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;activate example bookmarklet&lt;/a&gt;
+<pre class="prettyprint">&lt;a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://blakebutcher.com/content/example-bookmarklet.js?'+Math.floor(new%20Date().getTime()/(2*60*1000));})();"&gt;
+	activate example bookmarklet
+&lt;/a&gt;
 </pre>
 
 Which will render like so:
@@ -20,7 +22,7 @@ Which will render like so:
 
 The users can then drags the link to their browser bookmark bar. From there they can click to activate the bookmarklet.
 
-This bookmarklet itself just inserts a script tag that loads the specified [external JavaScript file](/content/example-bookmarklet.js) into the current page. In this case the external JavaScript just triggers a simple alert box.
+This bookmarklet itself just inserts a script tag that loads the specified external JavaScript file into the current page. In this case the [external JavaScript](/content/example-bookmarklet.js) just triggers a simple alert box.
 
 It has a 2 minute cache-busting query string to ensure that the latest version of the JavaScript file is loaded.
 
