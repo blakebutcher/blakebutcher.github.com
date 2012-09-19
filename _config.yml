@@ -3,7 +3,7 @@ permalink: /:year-:month-:day/:title/
 paginate: 5
 exclude:
 name: Blake Butcher
-tagline: I have no tagline
+tagline: 
 baseurl: /
 production_url : http://blakebutcher.com
 navigation:
