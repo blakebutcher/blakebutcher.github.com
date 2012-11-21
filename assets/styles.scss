@@ -1,21 +1,21 @@
 @mixin background-linear-gradient-vertical($topColor, $bottomColor) {
-	/* fallback/image non-cover color */
+	// fallback/image non-cover color
 	background-color: $bottomColor;
-	/* Firefox 3.6+ */
+	// Firefox 3.6+
 	background-image: -moz-linear-gradient($topColor, $bottomColor);
-	/* Safari 4+, Chrome 1+ */
+	// Safari 4+, Chrome 1+
 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($topColor), to($bottomColor));
-	/* Safari 5.1+, Chrome 10+ */
+	// Safari 5.1+, Chrome 10+
 	background-image: -webkit-linear-gradient($topColor, $bottomColor);
-	/* Opera 11.10+ */
+	// Opera 11.10+
 	background-image: -o-linear-gradient($topColor, $bottomColor);
 }
 
 body {
-	font-family: Esteban, Georgia, sans-serif;
-	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
 	line-height: 1.5;
-	@include background-linear-gradient-vertical(#fff, #eee);
+	//@include background-linear-gradient-vertical(#fff, #eee);
 }
 
 h1, h2, h3, h4, h5, h6 {
