@@ -13,3 +13,5 @@ a:visited { color: #9ed040; }
 a:hover { color: #103a10; }
 a.permalink:link, a.permalink:visited { color: #ccc; }
 a.permalink:hover { color: #333; text-decoration: none; }
+
+p, li { max-width: 30em; }
