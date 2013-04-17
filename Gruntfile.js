@@ -19,7 +19,12 @@ module.exports = function(grunt) {
 		compass: {
 			all: {
 				options: {
-					config: 'config.rb'
+					outputStyle: 'compressed',
+					httpPath: '/',
+					cssDir: 'assets/styles/min',
+					sassDir: 'assets/styles',
+					imagesDir: 'assets/images',
+					javascriptsDir: 'assets/scripts'
 				}
 			}
 		},
@@ -40,7 +45,7 @@ module.exports = function(grunt) {
 			}			
 		},
 		compare_size: {
-			files: [ "assets/**/*.js", "assets/**/*.scss", "assets/**/*.css"]
+			files: [ 'assets/**/*.js', 'assets/**/*.scss', 'assets/**/*.css']
 		}
 	});
 
