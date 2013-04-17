@@ -7,6 +7,9 @@ module.exports = function(grunt) {
 			files: ['Gruntfile.js', 'assets/scripts/*.js']
 		},
 		uglify: {
+			options: {
+				report: 'min'
+			},
 			all: {
 				files: {
 					'assets/scripts/min/scripts.js': ['assets/scripts/scripts.js']
@@ -35,18 +38,10 @@ module.exports = function(grunt) {
 					interrupt: true
 				}
 			}			
+		},
+		compare_size: {
+			files: [ "assets/**/*.js", "assets/**/*.scss", "assets/**/*.css"]
 		}
-		/*compare_size: {
-			files: [ "assets/scripts/scripts.js", "assets/scripts/min/scripts.js" ],
-			options: {
-				compress: {
-					gz: function( contents ) {
-						return gzip.zip( contents, {} ).length;
-					}
-				},
-				cache: "temp/.sizecache.json"
-			}
-		}*/
 	});
 
 	// Load the plugins
@@ -54,9 +49,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	//grunt.loadNpmTasks('grunt-compare-size');
+	grunt.loadNpmTasks('grunt-compare-size');
 
 	// Set task(s)
-	grunt.registerTask('default', ['jshint', 'uglify', 'compass']);
+	grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'compare_size']);
 
 };
