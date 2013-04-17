@@ -3,12 +3,18 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		// linting JS
 		jshint: {
-			files: ['Gruntfile.js', 'assets/scripts/*.js']
+			files: [
+				'Gruntfile.js',
+				'assets/scripts/*.js'
+			]
 		},
+		// minifying JS
 		uglify: {
 			options: {
 				report: 'min'
+				//banner: '/* <%= grunt.template.today("yyyy-mm-dd") %> */\n'
 			},
 			all: {
 				files: [
@@ -22,6 +28,7 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+		// compiling CSS
 		compass: {
 			all: {
 				options: {
@@ -34,10 +41,43 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		// compressing images
+		imagemin: { // Task
+			all: { // Target
+				options: { // Target options
+					optimizationLevel: 3
+				},
+				files: [ // Dictionary of files
+					{
+						expand: true, // Enable dynamic expansion.
+						cwd: 'assets/images/', // Src matches are relative to this path.
+						src: ['*.png'], // Actual pattern(s) to match.
+						dest: 'assets/images/', // Destination path prefix.
+						ext: '.png' // Dest filepaths will have this extension.
+					},
+					{
+						expand: true, // Enable dynamic expansion.
+						cwd: 'assets/images/', // Src matches are relative to this path.
+						src: ['*.jpg'], // Actual pattern(s) to match.
+						dest: 'assets/images/', // Destination path prefix.
+						ext: '.jpg' // Dest filepaths will have this extension.
+					}
+				]
+			}
+		},
+		// compare file sizes
+		compare_size: {
+			files: [
+				'assets/**/*.js',
+				'assets/**/*.scss',
+				'assets/**/*.css'
+			]
+		},
+		// watch task to automatically generate files during development
 		watch: {
 			styles: {
 				files: 'assets/styles/*.scss',
-				tasks: ['compass'],
+				tasks: ['compass', 'imagemin'],
 				options: {
 					interrupt: true
 				}
@@ -49,20 +89,18 @@ module.exports = function(grunt) {
 					interrupt: true
 				}
 			}			
-		},
-		compare_size: {
-			files: [ 'assets/**/*.js', 'assets/**/*.scss', 'assets/**/*.css']
 		}
 	});
 
-	// Load the plugins
+	// load the plugins
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-compare-size');
 
-	// Set task(s)
-	grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'compare_size']);
+	// set tasks
+	grunt.registerTask('default', ['jshint', 'uglify', 'compass', 'imagemin', 'compare_size']);
 
 };
