@@ -2,3 +2,5 @@
 .sass-cache
 node_modules
 .sizecache.json
+_site
+Gemfile.lock

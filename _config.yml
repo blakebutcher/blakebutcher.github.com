@@ -1,9 +1,8 @@
 # Jekyll
 permalink: /:year-:month-:day/:title/
 paginate: 5
-exclude:
 name: Blake Butcher
-tagline: 
+gems: [jekyll-paginate]
 baseurl: /
 production_url : http://blakebutcher.com
 navigation:
